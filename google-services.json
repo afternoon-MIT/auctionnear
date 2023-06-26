@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "801936575921",
+    "project_id": "auctionnear-3084a",
+    "storage_bucket": "auctionnear-3084a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801936575921:android:ccddca0b2d0596c1164190",
+        "android_client_info": {
+          "package_name": "com.example.auctionnearapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801936575921-oujoici6580ha9q9iti99507na7vto86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIj42IU5OCbMVMvsrG557TZVwxy7zR9sQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801936575921-oujoici6580ha9q9iti99507na7vto86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

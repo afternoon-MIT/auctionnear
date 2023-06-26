@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AUCTIONNEARAPP</string>
+    <string name="add_auctions">ADD AUCTIONS</string>
+    <string name="view_past_auctions">VIEW PAST AUCTIONS</string>
+</resources>

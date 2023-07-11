@@ -1,8 +1,4 @@
 package com.example.auctionnearapp
-
-
-
-
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
@@ -16,51 +12,47 @@ import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var inputemail: EditText
-    lateinit var inputpassword: EditText
-    lateinit var btnlogin: Button
-    lateinit var textviewsignup: TextView
-    lateinit var forgotpassword: TextView
-    lateinit var mAuth: FirebaseAuth
-    lateinit var progress: ProgressDialog
+    private lateinit var inputemail: EditText
+    private lateinit var inputpassword: EditText
+    private lateinit var forgotpassword: TextView
+    private lateinit var btnlogin: Button
+    private lateinit var textviewSignUp: TextView
+    private lateinit var mAuth: FirebaseAuth
+    private lateinit var progress: ProgressDialog
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        inputemail = findViewById(R.id.inputEmail)
-        inputpassword = findViewById(R.id.inputPassword)
-        btnlogin = findViewById(R.id.btnLogin)
-        textviewsignup = findViewById(R.id.textviewSignUp)
+         inputemail= findViewById(R.id.inputEmail)
+       inputpassword = findViewById(R.id.inputPassword)
         forgotpassword = findViewById(R.id.forgotPassword)
+        btnlogin = findViewById(R.id.btnLogin)
+       textviewSignUp = findViewById(R.id.textviewSignUp)
         mAuth = FirebaseAuth.getInstance()
         progress = ProgressDialog(this)
-        progress.setTitle("Loading")
+        progress.setTitle("Loading LOGIN")
         progress.setMessage("Please wait...")
         btnlogin.setOnClickListener {
-            var email = inputemail.text.toString().trim()
-            var password = inputpassword.text.toString().trim()
+            val email = inputemail.text.toString().trim()
+            val password = inputpassword.text.toString().trim()
 
             // Check if the user is submitting empty files
 
             if (email.isEmpty()) {
-                inputemail.setError("Please fill this input")
+                inputemail.error = "Please fill this input"
                 inputemail.requestFocus()
             } else if (password.isEmpty()) {
-                inputpassword.setError("Please fill the input")
-                inputpassword.requestFocus()
+                inputpassword.error = "Please fill the input"
+               inputpassword.requestFocus()
             } else {
                 // Proceed to register the user
                 progress.show()
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-                    progress.dismiss()
                     if (it.isSuccessful) {
-                        Toast.makeText(
-                            this, "Registration  successful",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        mAuth.signOut()
-                        startActivity(Intent(this, LoginActivity::class.java))
+                        Toast.makeText(this@LoginActivity, "Login  successful", Toast.LENGTH_SHORT).show()
+
+                        startActivity(Intent(this, HomeActivity::class.java))
                         finish()
 
                     } else {
@@ -69,8 +61,8 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
-        textviewsignup.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+        textviewSignUp.setOnClickListener {
+            startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
             finish()
         }
         forgotpassword.setOnClickListener {
@@ -78,8 +70,8 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun displaymessage(title: String, message: String) {
-        var alertDialog = AlertDialog.Builder(this)
+    private fun displaymessage(title: String, message: String) {
+        val alertDialog = AlertDialog.Builder(this)
         alertDialog.setTitle(title)
         alertDialog.setMessage(message)
         alertDialog.setPositiveButton("Ok", null)

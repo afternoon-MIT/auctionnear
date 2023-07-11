@@ -38,10 +38,10 @@ class RegisterActivity : AppCompatActivity() {
         progress.setMessage("Please wait ...")
         btnregister.setOnClickListener {
 
-            var name = inputname.text.toString().trim()
-            var email = inputemail.text.toString().trim()
-            var password = inputpassword.text.toString().trim()
-            var confirmpassword = confirmpassword.text.toString().trim()
+            val name = inputname.text.toString().trim()
+            val email = inputemail.text.toString().trim()
+            val password = inputpassword.text.toString().trim()
+
 
             // Check if the user is submitting empty files
             if (name.isEmpty()){
@@ -63,7 +63,7 @@ class RegisterActivity : AppCompatActivity() {
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     progress.dismiss()
                     if (it.isSuccessful){
-                        Toast.makeText(this, "Registrationn successful",
+                        Toast.makeText(this, "Registration successful",
                             Toast.LENGTH_SHORT).show()
                         mAuth.signOut()
                         startActivity(Intent(this, LoginActivity::class.java))
@@ -80,7 +80,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
     fun displaymessage(title:String, message:String){
-        var alertDialog = AlertDialog.Builder(this)
+        val alertDialog = AlertDialog.Builder(this)
         alertDialog.setTitle(title)
         alertDialog.setMessage(message)
         alertDialog.setPositiveButton("Ok",null)

@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
+                android:id="@+id/mcardaddauctions"
                 android:layout_weight="1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -43,7 +44,6 @@
                 app:cardElevation="12dp">
 
                 <LinearLayout
-                    android:id="@+id/mcardaddauctions"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -69,6 +69,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/mcardviewauctions"
                 android:layout_weight="1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -79,7 +80,7 @@
                 app:cardElevation="12dp">
 
                 <LinearLayout
-                    android:id="@+id/mcardviewauctions"
+
                     android:layout_width="160dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -113,6 +114,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
+                android:id="@+id/mcardviewpastauctions"
                 android:layout_weight="1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -123,7 +125,7 @@
                 app:cardElevation="12dp">
 
                 <LinearLayout
-                    android:id="@+id/mcardviewpastauctions"
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -149,6 +151,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/mcardbestsellers"
                 android:layout_weight="1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -159,7 +162,7 @@
                 app:cardElevation="12dp">
 
                 <LinearLayout
-                    android:id="@+id/mcardbestsellers"
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -192,6 +195,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
+                android:id="@+id/mcardauctionrankings"
                 android:layout_weight="1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -202,7 +206,7 @@
                 app:cardElevation="12dp">
 
                 <LinearLayout
-                    android:id="@+id/mcardauctionrankings"
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -228,6 +232,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/mcardprofile"
                 android:layout_weight="1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -238,7 +243,7 @@
                 app:cardElevation="12dp">
 
                 <LinearLayout
-                    android:id="@+id/mcardprofile"
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
